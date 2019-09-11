@@ -1,0 +1,366 @@
+/* ---------------------
+        General     
+---------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Mitr','Open Sans', sans-serif;
+    opacity: 0.9;
+    /* background: gray; */
+}
+
+a{
+    text-decoration: none;
+    opacity: 0.8;   
+    color: inherit;
+}
+a:hover{
+    opacity: 1;
+}
+
+
+
+/* ---------------------
+        Header    
+---------------------- */
+header {
+    color: white;
+    display: flex;
+    justify-content: space-around;
+    /* background-color: white; */
+    align-items: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+
+}
+header h2 {
+    margin: 0.5em;
+    /* align-self: center; */
+}
+header>nav {
+    display: flex;
+    align-items: center;
+}
+
+header>nav>li {
+    list-style: none;
+    margin: 10px;
+    /* align-self: center; */
+}
+
+header>nav>li:first-child {
+    margin-left: 0;
+}
+
+header > nav > li:last-child {
+    margin-right: 0;
+}
+
+@media all and (max-width:600px) {
+    header {
+        flex-direction: column;
+    }
+}
+
+/* ---------------------
+        Cover    
+---------------------- */
+.cover {
+    display: flex;
+    flex-direction: column;
+	align-items: center;
+    justify-content: center;
+    position: relative;
+    min-height: 100vh;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.2);
+}
+
+.cover .cover-image{
+    position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+    background-size: cover;
+    background-repeat: no-repeat;
+	background-color: #2196F3;
+	z-index: -1;
+    background-image: url(../img/1.jpg);
+    background-position: center;
+}
+.cover h1 {
+    font-size: 4em;
+}
+.cover h3 {
+    font-size: 3em;
+}
+.cover h4 {
+    font-size: 2em;
+}
+.cover a.btn {
+    margin-top: 30px;
+    padding: 16px 50px;
+    text-align: center;
+    background-color: lightblue;
+    border-radius: 10px;
+    text-shadow: 0px 0px 20px black;
+    
+}
+
+@media all and (max-width:960px) {
+    .cover h1 {
+        font-size: 3em;
+    }
+    .cover h3 {
+        font-size: 2em;
+    }
+    .cover h4 {
+        font-size: 1.5em;
+    }
+}
+@media all and (max-width:600px) {
+    .cover h1 {
+        font-size: 2.5em;
+    }
+    .cover h3 {
+        font-size: 1.5em;
+    }
+    .cover h4 {
+        font-size: 1em;
+    }
+}
+
+/* ---------------------
+        Content    
+---------------------- */
+.content {
+    padding: 60px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+}
+
+.content hr {
+    width: 90vw;
+    height: 3px;
+    background-color: papayawhip;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border: none;
+    border-radius: 50%;
+}
+
+.content>.image-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    flex-wrap: wrap;
+
+}
+
+.content>.image-container>.imgGrids {
+    display: flex;
+    flex-direction: column;
+    max-width: 30%;
+    margin-right: 5px;
+    margin-left: 5px;
+}
+
+.content>.image-container>.imgGrids img {
+    width: 100%;
+    /* flex-basis: 50%; */
+    margin: 5px 0;
+}
+
+@media all and (max-width:960px) {
+    .content>.image-container>.imgGrids {
+        max-width: 40%;
+    }
+}
+@media all and (max-width:600px) {
+    .content>.image-container>.imgGrids {
+        max-width: 100%;
+    }
+}
+
+/* ---------------------
+    Features and Service    
+---------------------- */
+.feature-service {
+    display: flex;
+    flex-direction: column;
+    background:rgb(238, 238, 238);
+    align-items: center;
+    padding: 60px 10px;
+    color: black;
+}
+
+.feature-service .topFeatureBox {
+    text-align: center;
+}
+
+.feature-service .topFeatureBox h5 {
+    text-align: center;
+    color: gray;
+    font-weight: 300;
+}
+
+.feature-service .downFeatureBox {
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+    /* align-content: center; */
+    /* justify-content: center; */
+
+    padding: 0 30px;
+    
+}
+.feature-service .downFeatureBox .features{
+    padding: 20px;    
+    flex-basis: 33%;
+}
+
+.features i{
+    font-size: 50px;
+    color: #2196F3;
+    margin-bottom: 20px;
+}
+
+@media all and (max-width:800px) {
+    .feature-service .downFeatureBox {
+        flex-direction: column;
+    }
+}
+
+/* ---------------------
+        Comments    
+---------------------- */
+
+.comments-section {
+    display: flex;
+    flex-direction: column;
+    padding: 50px 20px;
+    align-items: center;
+}
+
+.comments-section h1 {
+    padding: 20px 20px;
+    font-size: 2em;
+}
+
+.comments-section .comment {
+    text-align: center;
+    margin-top: 20px;
+    display: flex;
+    flex-direction: column;
+
+}
+
+.comment h5 {
+    padding: 20px 0;
+    font-size: 1.2em;
+}
+.comment p {
+    font-size: 1.5em;
+    font-weight: 100;
+}
+
+.comment hr {
+    width: 60vw;
+    border-radius: 50%;
+    height: 2px;
+    align-self: center;
+}
+
+.comment:last-child hr {
+    display: none;
+}
+
+/* ---------------------
+    Work with US    
+---------------------- */
+
+.workWithUs-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(238, 238, 238);
+    padding: 50px 30px;
+}
+
+.workWithUs-section h1 {
+    font-size: 32px;
+}
+
+.workWithUs-section p {
+    font-size: 20px;
+    font-weight: 200;
+}
+
+.workWithUs-section form input[type="email"] {
+    font-size: 30px;
+    padding: 0.25em;
+    padding-left: 0.5em;
+    width: 20em;
+    font-weight: 200;
+    border:3px solid lightblue;
+}
+
+.workWithUs-section form input[type="submit"] {
+    font-size: 30px;
+    padding: 9px 40px;
+    background-color: lightblue;
+    border-radius: 10px;
+    border: 1px solid white;
+
+}
+
+/* ---------------------
+        Footer   
+---------------------- */
+
+footer {
+    display: flex;
+    flex-direction: column;
+    padding-top: 50px;
+    padding-bottom: 50px;
+    align-items: center;
+    background-color: rgb(65,74,79);
+    color: white;
+}
+
+footer nav{
+
+}
+
+footer nav ul{
+    display: flex;
+    flex-flow: row nowrap;
+    list-style: none;
+}
+
+nav ul li{
+    
+    font-size: 50px;
+    margin: 10px;
+}
+
+footer h5{
+    font-size: 20px;
+}
+
+footer h6{
+    font-size: 20px;
+    font-weight: 300;
+
+}
