@@ -307,11 +307,18 @@ header > nav > li:last-child {
     font-weight: 200;
 }
 
+.workWithUs-section form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 80vw;
+}
+
 .workWithUs-section form input[type="email"] {
     font-size: 30px;
     padding: 0.25em;
     padding-left: 0.5em;
-    width: 20em;
+    width: 70vw;
     font-weight: 200;
     border:3px solid lightblue;
 }
